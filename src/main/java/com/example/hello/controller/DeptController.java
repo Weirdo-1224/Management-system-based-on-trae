@@ -40,10 +40,10 @@ public class DeptController {
         return Result.success();
     }
 
-    // 删除部门
-    // @DeleteMapping("/{id}")
-    // public Result<Void> delete(@PathVariable Integer id) {
-    //     deptService.delete(id);
-    //     return Result.success();
-    // }
+    //删除部门
+    @DeleteMapping("/{id}")
+    public Result<Void> delete(@PathVariable Integer id) {
+        deptService.delete(id);
+        return Result.success();
+    }
 }
