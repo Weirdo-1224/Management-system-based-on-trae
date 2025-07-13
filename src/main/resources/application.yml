@@ -1,0 +1,34 @@
+# 数据库配置
+spring:
+  datasource:
+    url: jdbc:mysql://test-zxyf-mysql.ns-fs8qstzj.svc:3306/zxyf?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    username: root
+    password: x2r9czx7
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  servlet:
+    multipart:
+      max-file-size: 10MB      # Single file size limit
+      max-request-size: 10MB   # Total request size limit
+
+# MyBatis配置
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.example.hello.entity
+  configuration:
+    map-underscore-to-camel-case: true
+
+# PageHelper配置
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+
+minio:
+  access-key: fs8qstzj
+  secret-key: cf4pswl979fh99dj
+  endpoint: http://object-storage.objectstorage-system.svc.cluster.local
+  bucket-name: fs8qstzj-zxyf
+
+
+jwt:
+  secret: "uC7ZfK2t9xQp3r6u8x/AeDgRjUmWnZr4t7w!z%C*F-JaNdRgUkXp2s5v8y/B?E(H+Kb"  # 替换为生成的密钥
+  expiration: 86400000  # 保持不变
