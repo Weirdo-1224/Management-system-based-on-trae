@@ -41,9 +41,9 @@ public class DeptController {
     }
 
     // 删除部门
-    @DeleteMapping("/{id}")
-    public Result<Void> delete(@PathVariable Integer id) {
-        deptService.delete(id);
-        return Result.success();
-    }
+    // @DeleteMapping("/{id}")
+    // public Result<Void> delete(@PathVariable Integer id) {
+    //     deptService.delete(id);
+    //     return Result.success();
+    // }
 }
